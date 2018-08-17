@@ -1,0 +1,15 @@
+@mixin transition($args...) {
+    -webkit-transition: $args;
+    -moz-transition: $args;
+    -ms-transition: $args;
+    -o-transition: $args;
+    transition: $args;
+  }
+
+@mixin textStroke($args...) {
+    -webkit-text-stroke: $args;
+    -moz-text-stroke: $args;
+    -ms-text-stroke: $args;
+    -o-text-stroke: $args;
+    
+}

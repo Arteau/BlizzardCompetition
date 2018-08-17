@@ -1,0 +1,29 @@
+// Body
+$body-bg: rgb(207, 207, 207);
+
+//custom fonts
+@font-face{
+    font-family: "BelweBold";
+    src:    url('/fonts/BelweBold.ttf') format('truetype'),
+            url('/fonts/BelweBold.woff') format('woff');
+}
+
+@font-face{
+    font-family: "BlizQuadrata";
+    src:    url('/fonts/BlizQuadrata.ttf') format('truetype'),
+            url('/fonts/BlizQuadrata.woff') format('woff');
+}
+
+// Colors
+$boxBorderColor: rgba(206, 201, 218, 0.7);
+$boxColor: rgba(37, 27, 63, 0.7);
+
+// Distances
+$vh-no-brandbar: calc(100vh - 120px);
+
+// Typography
+$font-family-sans-serif: "Open Sans", sans-serif;
+$font-family-belwe: "BelweBold";
+$font-family-quadrata: "BlizQuadrata";
+$font-size-base: 0.9rem;
+$line-height-base: 1.6;
