@@ -1,0 +1,171 @@
+// General Styling
+html, body {
+    margin: 0;
+    height: 100%;
+
+}
+
+h1, h2, h2 {
+    font-family: $font-family-belwe;
+}
+
+p {
+    font-family: $font-family-quadrata;
+}
+
+// Index
+
+
+.frontPageWrapper{
+    height: 100%;
+    z-index: 100;
+    position: relative;
+
+    .frontPageGrid{
+        height: 100%;
+        color: #ffffff;
+        // padding-top: 30px;
+        // margin-left: 50px;
+        // margin-right: 50px;
+        z-index: 2;
+        display: grid;
+        grid-template-columns: 2fr 3fr 2fr;
+        grid-template-rows: 2fr;
+
+        .winnerBox{
+            display:grid;
+            grid-template-columns: 1fr;
+            grid-template-rows: 1fr 1px 2fr;
+            margin-left: 50px;
+            width: 70%;
+            // height: fit-content;
+            height: 25vh;
+            font-family: $font-family-sans-serif;
+
+            color: hsla(0,0%,100%,.7);
+            background-color: #2c0742c4;
+            border: 1px solid  hsla(0,0%,100%,.15);
+
+            h1,h2,h3{
+                font-family: $font-family-sans-serif !important;   
+                padding:0;
+                margin:0;
+            }
+    
+            .winnerBoxTitle{
+                // padding-left: 20px;
+                // padding-top: 20px;
+                text-align: center;
+                // font-size: 1.5rem !important;
+                font-size: 3vh;
+                font-weight: bold;
+                justify-self: center;
+                align-self: center;
+                // margin-bottom: 1rem;
+                // margin-top: 1rem;
+                padding: 0;
+            }
+            hr{
+                height: 1px;
+                margin: 0 !important;
+                padding: 0 !important;
+                border-top: 1px solid hsla(0,0%,100%,.15) !important;
+            }
+            .winnerName{
+                
+                width: 100%;
+                text-align: center;
+                // font-size: 1.5rem !important;
+                font-size: 2.8vh;
+                justify-self: center;
+                align-self: center;
+            }
+    
+ 
+            
+        }
+
+        .centerBox{
+            // padding-top: 15vh;
+            text-align: center;
+            align-content: center;
+            justify-content: center;
+            height: 100%;
+        
+
+            .boomsdayLogo{
+                margin-top: -9vh; //as long as this is smaller than the height of the brandbar, it will not go out of bounds.
+                height: 30vh;
+            }
+            .centerBoxTitle{
+                margin-top: -3vh;
+                @include textStroke(1px black);
+                // font-size: 3rem !important;
+                font-size: 5vh;
+            }
+            .centerBoxInfo {
+                font-family: $font-family-sans-serif;
+                font-size: 2.5vh;
+                font-weight: 200;
+            }
+
+            .exampleImgGrid{
+                margin-top: 3vh;
+
+                .playExample_incomplete, .playExample_complete{
+                    height: 39vh;
+                }
+                .playExample_arrow{
+                    height: 10vh;
+                }
+            }
+            .hsButton{
+                width: 20vw;
+                max-width: 500px;
+                margin-left: 50%;
+                transform: translateX(-50%);
+                margin-top: 4.7vh;
+            }
+    
+        }
+    
+
+
+
+
+
+
+    
+    }
+}
+
+
+// .pageDivider{
+//     z-index: 2;
+//     margin-bottom: -10vh;
+//     height: 10vh;
+//     transform: translateY(-70%);
+//     position: relative;
+//     background-image: url('/img/pageDivider.png');
+//     background-position: center -2px;
+// }
+
+// .parchment{
+//     position: relative;
+//     background-image: url('/img/ParchmentBackground.jpg');
+//     height: 15vh;
+//     width: 100%;
+//     z-index: 1;
+//     position: relative;
+// }
+
+.bgVideo{
+    left: 52%;
+    transform: translateX(-48%);
+    max-width: none;
+    position: fixed;
+    display: inline-block;
+    object-fit: contain;
+    z-index: 0;
+    top:-60%;
+}

@@ -10483,23 +10483,6 @@ a.text-dark:focus {
   }
 }
 
-html,
-body {
-  margin: 0;
-  height: 100%;
-  overflow: hidden;
-}
-
-h1,
-h2,
-h2 {
-  font-family: "BelweBold";
-}
-
-p {
-  font-family: "BlizQuadrata";
-}
-
 .brandbar {
   height: 10vh;
   padding-left: 50px;
@@ -10538,73 +10521,85 @@ p {
   height: 90%;
 }
 
-.brandbar .boomsdayLogo {
-  position: absolute;
-  left: 50%;
-  -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
-  height: 25vh;
+html,
+body {
+  margin: 0;
+  height: 100%;
+}
+
+h1,
+h2,
+h2 {
+  font-family: "BelweBold";
+}
+
+p {
+  font-family: "BlizQuadrata";
 }
 
 .frontPageWrapper {
-  height: 75vh;
+  height: 100%;
+  z-index: 100;
   position: relative;
-  z-index: 4;
 }
 
 .frontPageWrapper .frontPageGrid {
+  height: 100%;
   color: #ffffff;
-  padding-top: 30px;
-  margin-left: 50px;
-  margin-right: 50px;
   z-index: 2;
   display: grid;
-  grid-template-columns: 1fr 3fr 1fr;
-  grid-template-rows: 2fr 1fr;
-  grid-column-gap: 40px;
-  grid-row-gap: 20px;
+  grid-template-columns: 2fr 3fr 2fr;
+  grid-template-rows: 2fr;
 }
 
 .frontPageWrapper .frontPageGrid .winnerBox {
-  opacity: 0.7;
-  height: -webkit-fit-content;
-  height: -moz-fit-content;
-  height: fit-content;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1px 2fr;
+  margin-left: 50px;
+  width: 70%;
+  height: 25vh;
   font-family: "Open Sans", sans-serif;
-  color: white;
-  background-color: rgba(37, 27, 63, 0.7);
-  border: 1px solid rgba(206, 201, 218, 0.7);
+  color: rgba(255, 255, 255, 0.7);
+  background-color: #2c0742c4;
+  border: 1px solid rgba(255, 255, 255, 0.15);
 }
 
 .frontPageWrapper .frontPageGrid .winnerBox h1,
 .frontPageWrapper .frontPageGrid .winnerBox h2,
 .frontPageWrapper .frontPageGrid .winnerBox h3 {
   font-family: "Open Sans", sans-serif !important;
+  padding: 0;
+  margin: 0;
 }
 
 .frontPageWrapper .frontPageGrid .winnerBox .winnerBoxTitle {
   text-align: center;
-  font-size: 1.7em !important;
+  font-size: 3vh;
   font-weight: bold;
-  margin-bottom: 1rem;
-  margin-top: 1rem;
-  padding-bottom: 0%;
+  justify-self: center;
+  -ms-flex-item-align: center;
+      align-self: center;
+  padding: 0;
 }
 
 .frontPageWrapper .frontPageGrid .winnerBox hr {
+  height: 1px;
   margin: 0 !important;
-  border-top: 1px solid rgba(206, 201, 218, 0.7) !important;
+  padding: 0 !important;
+  border-top: 1px solid rgba(255, 255, 255, 0.15) !important;
 }
 
 .frontPageWrapper .frontPageGrid .winnerBox .winnerName {
+  width: 100%;
   text-align: center;
-  font-size: 1.3em !important;
-  margin-top: 1rem;
-  margin-bottom: 1rem;
+  font-size: 2.8vh;
+  justify-self: center;
+  -ms-flex-item-align: center;
+      align-self: center;
 }
 
 .frontPageWrapper .frontPageGrid .centerBox {
-  padding-top: 5rem;
   text-align: center;
   -ms-flex-line-pack: center;
       align-content: center;
@@ -10614,26 +10609,33 @@ p {
   height: 100%;
 }
 
+.frontPageWrapper .frontPageGrid .centerBox .boomsdayLogo {
+  margin-top: -9vh;
+  height: 30vh;
+}
+
 .frontPageWrapper .frontPageGrid .centerBox .centerBoxTitle {
+  margin-top: -3vh;
   -webkit-text-stroke: 1px black;
   -moz-text-stroke: 1px black;
   -ms-text-stroke: 1px black;
   -o-text-stroke: 1px black;
-  font-size: 3em !important;
+  font-size: 5vh;
 }
 
 .frontPageWrapper .frontPageGrid .centerBox .centerBoxInfo {
   font-family: "Open Sans", sans-serif;
-  font-weight: bold;
+  font-size: 2.5vh;
+  font-weight: 200;
 }
 
 .frontPageWrapper .frontPageGrid .centerBox .exampleImgGrid {
-  padding-top: 1rem;
+  margin-top: 3vh;
 }
 
 .frontPageWrapper .frontPageGrid .centerBox .exampleImgGrid .playExample_incomplete,
 .frontPageWrapper .frontPageGrid .centerBox .exampleImgGrid .playExample_complete {
-  height: 30vh;
+  height: 39vh;
 }
 
 .frontPageWrapper .frontPageGrid .centerBox .exampleImgGrid .playExample_arrow {
@@ -10641,30 +10643,12 @@ p {
 }
 
 .frontPageWrapper .frontPageGrid .centerBox .hsButton {
-  width: 80%;
-  margin-left: 10%;
-  margin-right: 0;
-  margin-top: 4rem;
-}
-
-.pageDivider {
-  z-index: 2;
-  margin-bottom: -10vh;
-  height: 10vh;
-  -webkit-transform: translateY(-70%);
-          transform: translateY(-70%);
-  position: relative;
-  background-image: url("/img/pageDivider.png");
-  background-position: center -2px;
-}
-
-.parchment {
-  position: relative;
-  background-image: url("/img/ParchmentBackground.jpg");
-  height: 15vh;
-  width: 100%;
-  z-index: 1;
-  position: relative;
+  width: 20vw;
+  max-width: 500px;
+  margin-left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  margin-top: 4.7vh;
 }
 
 .bgVideo {
@@ -10680,6 +10664,56 @@ p {
   top: -60%;
 }
 
+.footer {
+  position: relative;
+  bottom: 0;
+  margin-top: 1vh;
+  z-index: 100;
+  width: 100%;
+  height: 1.4rem;
+  background-color: #2c0742c4;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: "Open Sans", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.4;
+  color: rgba(255, 255, 255, 0.7);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+  display: grid;
+  grid-template-columns: 3fr 1fr 1fr 1fr 1fr 1fr 1fr 3fr;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.footer a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 0.8rem;
+  text-align: center;
+  height: 100%;
+  width: 100%;
+  min-width: 150px;
+  border-right: 1px solid rgba(255, 255, 255, 0.15);
+  border-left: 1px solid rgba(255, 255, 255, 0.15);
+  -webkit-transition: background-color, 0.5s, ease-out;
+  transition: background-color, 0.5s, ease-out;
+}
+
+@media screen and (prefers-reduced-motion: reduce) {
+  .footer a {
+    -webkit-transition: none;
+    transition: none;
+  }
+}
+
+.footer a:hover {
+  background-color: #250736c4;
+}
+
 a {
   text-decoration: none;
 }
@@ -10688,14 +10722,17 @@ a:hover {
   text-decoration: none;
 }
 
+/* Source of Button: https://codepen.io/CakeForge/pen/KrLyNQ */
+
 /* Button HearthStone Base
 –––––––––––––––––––––––––––––––––––––––––––––––––––– */
 
 .hs-wrapper {
+  -ms-flex-item-align: center;
+      align-self: center;
   cursor: pointer;
   width: 100%;
-  height: 20%;
-  padding: 0 2px;
+  height: 9vh;
   border-right: none;
   border-left: none;
   -webkit-box-shadow: 0px 1px 20px 0px rgba(0, 0, 0, 0.35);
@@ -10714,22 +10751,18 @@ a:hover {
   display: table-cell;
   width: 100%;
   vertical-align: middle;
-  padding: 9px 24px;
-  padding: 0.6rem 1.5rem;
   text-transform: uppercase;
   font-weight: 700;
   text-shadow: 0 0 4px #000, 0 0 8px #000;
-  font-size: 20px;
-  font-size: 1.8rem;
+  font-size: 5vh;
   letter-spacing: 2px;
 }
 
 .hs-border {
   display: table;
-  padding: 3px;
   border-radius: 10px;
-  height: 100%;
-  min-height: 100%;
+  height: 9vh;
+  min-height: 9vh;
   width: 100%;
   /* Font style */
   text-transform: uppercase;
@@ -10738,7 +10771,7 @@ a:hover {
   color: #fff;
   text-decoration: none;
   text-shadow: 1px 1px #000;
-  font-size: 17px;
+  font-size: 3vh;
   line-height: 2;
   letter-spacing: 1px;
   text-align: center;
