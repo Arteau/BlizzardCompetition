@@ -1,0 +1,188 @@
+.playPageWrapper{
+    height: 85vh;
+    z-index: 100;
+    position: relative;
+
+    .playPageGrid{
+        position: relative;
+        display: grid;
+        height: 100%;
+        grid-template-areas: 
+            "cardNameBox hsCard contestantInfoBox"
+            "cardArtBox hsCard submitButton";
+        grid-template-columns: 35vw 1fr 35vw;
+        grid-template-rows: 20vh 60vh;
+        grid-row-gap: 5vh;
+        grid-column-gap: 20px;
+
+        .cardNameBox{
+            grid-area: "cardNameBox";
+            margin-left: 50px;
+            padding-left: 15px;
+            padding-right: 15px;
+            // min-height: 130px;
+            height: 23vh;
+            @include boxStyling();
+
+            .cardNameBoxTitle{
+                margin-top: 10px;
+                margin-bottom: 10px;
+                font-size: 3vh;
+                font-weight: bold;
+       
+     
+                padding: 0;
+            }
+            hr{
+                margin-left: -15px !important;
+                margin-right: -15px !important;
+            }
+            .cardNameBoxP{
+                padding:0;
+                margin-top: 5px;
+                font-size: 2.2vh;
+            }
+            .boxTextInput{
+                vertical-align: middle;
+                border-color: hsla(0,0%,100%,.15);
+                background-color: #76678027;
+                width: 100%;
+                color: #ffffff;
+                margin-bottom: 15px;
+                @include transition(background-color .15s ease-out);
+            }
+            .boxTextInput:focus{
+                @include transition(background-color .15s ease-in);
+                background-color: #ccb5db57;
+            }
+        }
+        
+        .hsCard{
+            grid-area: "hsCard";
+            justify-self: center;
+            margin-top: -5vh;
+            margin-left: -7px;
+            height: 65vh;
+        }
+        .cardArtBox{
+            margin-left: 50px;
+            grid-area: "cardArtBox";
+            @include boxStyling();
+            height: 50vh;
+
+            .cardArtBoxTitle{
+                margin-top: 10px;
+                margin-left: 15px;
+                margin-bottom: 10px;
+                font-size: 3vh;
+                font-weight: bold;
+                max-height: 5vh;
+       
+     
+                padding: 0;
+            }
+            .artworkGrid{
+                display: grid;
+                grid-template-columns: 1fr 1fr 1fr;
+                grid-template-rows: 2fr auto;
+                overflow: hidden;
+                height: 40vh;
+               
+                div{
+                    width: 100%;
+                    height: 35vh;
+                    overflow: hidden;
+                    display: grid;
+                    align-content: center;
+                    justify-content: center;
+                    img{
+                        width: 100%;
+                        @include transform(scale(1.2));
+                    }
+                }
+                .artRadio{
+                    height: 5vh;
+                    justify-self: center;
+                    align-self: center;
+                    height: 5vh;
+                }
+            }
+        }
+        .contestantInfoBox{
+            grid-area: "contestantInfoBox";
+
+                position: relative;
+                margin-right: 50px;
+                padding-left: 15px;
+                min-height: 130px;
+                height:75vh;
+                @include boxStyling();
+
+            
+                .cardNameBoxTitle{
+                    margin-top: 10px;
+                    margin-bottom: 10px;
+                    font-size: 3vh;
+                    font-weight: bold;
+                    padding: 0;
+                }
+                hr{
+                    margin-left: -15px !important;
+                }
+                .cardNameBoxP{
+                    padding:0;
+                    margin-top: 10px;
+                    margin-bottom: 5px;
+                    font-size: 2.2vh;
+                }
+                .boxTextInput{
+                    border-color: hsla(0,0%,100%,.15);
+                    background-color: #76678027;
+                    color: #ffffff;
+                    @include transition(background-color .15s ease-out);
+                }
+                .boxTextInput:focus{
+                    @include transition(background-color .15s ease-in);
+                    background-color: #ccb5db57;
+                }
+                .inputGrid{
+                    display:grid;
+                    grid-template-columns: 1fr 1fr;
+                    
+                }
+
+            
+        }
+        .submitButton{
+            align-self: end;
+            justify-self: center;
+            width: 80%;
+            grid-area: "submitButton";
+            margin-bottom: 10vh;
+        }
+
+    }
+}
+
+.bgImage{
+    left: 52%;
+    transform: translateX(-48%);
+    max-width: none;
+    position: fixed;
+    display: inline-block;
+    object-fit: contain;
+    z-index: 0;
+    top:-60%;
+}
+.bgImageOverlay{
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    background-color: rgba(60,60,60,.5);
+    max-width: none;
+    position: fixed;
+    display: inline-block;
+    object-fit: contain;
+    z-index: 1;
+}

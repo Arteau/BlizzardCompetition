@@ -1,19 +1,25 @@
 
-// Fonts
+// --------Fonts------------
 @import url("https://fonts.googleapis.com/css?family=Raleway:300,400,600");
 @import url('https://fonts.googleapis.com/css?family=Open+Sans');
 
-// Mixins
+// --------Mixins-----------
 @import "mixins";
 
-// Variables
+// --------Variables--------
 @import "variables";
 
-// Bootstrap
+// --------Bootstrap--------
 @import '~bootstrap/scss/bootstrap';
 
-// Custom
+// --------Custom----------
+// General
+@import "general";
+// Includes
 @import "brandbar";
-@import "index";
 @import "footer";
 @import "hsbutton";
+
+// Views
+@import "index";
+@import "play";

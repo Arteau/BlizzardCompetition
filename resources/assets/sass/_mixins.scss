@@ -12,3 +12,23 @@
     -ms-text-stroke: $args;
     -o-text-stroke: $args;    
 }
+@mixin transform($args...) {
+    -webkit-transform: $args;
+    -moz-transform: $args;
+    -ms-transform: $args;
+    -o-transform: $args;
+    transform: $args;
+}
+@mixin boxShadow($args...){
+    //I have no clue whether or not -ms-, -o-, and w/o prefix are necessary or even helpful.
+    -webkit-box-shadow: $args;
+    -moz-box-shadow: $args;
+    -ms-box-shadow: $args;
+    -o-box-shadow: $args;
+    box-shadow: $args;
+}
+@mixin boxStyling(){
+    color: hsla(0,0%,100%,.7);
+    background-color: #2c0742c4;
+    border: 1px solid  hsla(0,0%,100%,.15);
+}

@@ -1,11 +1,12 @@
 <div class="hs-wrapper classic">
-        <a class="hs-button classic" href="/play">
+<a class="hs-button classic" href={{$href}}>
         <span class="hs-border classic">
         <span class="hs-text classic">
-        Play Now
+        {{$textVar}}
         </span>
         </span>
         </a>
 </div>
 
+{{-- <div class="hsButton">@include("inc.hsbutton", ['textVar' => "Button Text!"])</div> --}}
 {{-- Source of button: https://codepen.io/CakeForge/pen/KrLyNQ --}}

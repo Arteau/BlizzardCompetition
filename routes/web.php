@@ -17,5 +17,14 @@
 
 Route::get('/', 'PagesController@index');
 
-Route::get('/play', 'PagesController@play');
+Route::get('/play/{id}', 'PagesController@play')->name('play');
+Route::post('/play/answer', 'PagesController@answer')->name('answer');
+
+Route::get('/thanks', 'PagesController@thanks')->name('thanks');
+
+Route::get('/admin', 'AdminController@index')->name('admin')->middleware('auth');
+Route::post('/admin/newCompetition', 'AdminController@newCompetition')->name('newCompetition')->middleware('auth');
+
+Auth::routes();
+
 

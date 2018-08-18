@@ -10483,11 +10483,35 @@ a.text-dark:focus {
   }
 }
 
+html,
+body {
+  margin: 0;
+  height: 100%;
+}
+
+h1,
+h2,
+h2 {
+  font-family: "Open Sans", sans-serif;
+  font-weight: bold;
+}
+
+p {
+  font-family: "Open Sans", sans-serif;
+}
+
+hr {
+  height: 1px;
+  margin: 0;
+  padding: 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.15);
+}
+
 .brandbar {
   height: 10vh;
   padding-left: 50px;
   position: relative;
-  z-index: 1;
+  z-index: 9999;
 }
 
 .brandbar a {
@@ -10521,156 +10545,12 @@ a.text-dark:focus {
   height: 90%;
 }
 
-html,
-body {
-  margin: 0;
-  height: 100%;
-}
-
-h1,
-h2,
-h2 {
-  font-family: "BelweBold";
-}
-
-p {
-  font-family: "BlizQuadrata";
-}
-
-.frontPageWrapper {
-  height: 100%;
-  z-index: 100;
-  position: relative;
-}
-
-.frontPageWrapper .frontPageGrid {
-  height: 100%;
-  color: #ffffff;
-  z-index: 2;
-  display: grid;
-  grid-template-columns: 2fr 3fr 2fr;
-  grid-template-rows: 2fr;
-}
-
-.frontPageWrapper .frontPageGrid .winnerBox {
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: 1fr 1px 2fr;
-  margin-left: 50px;
-  width: 70%;
-  height: 25vh;
-  font-family: "Open Sans", sans-serif;
-  color: rgba(255, 255, 255, 0.7);
-  background-color: #2c0742c4;
-  border: 1px solid rgba(255, 255, 255, 0.15);
-}
-
-.frontPageWrapper .frontPageGrid .winnerBox h1,
-.frontPageWrapper .frontPageGrid .winnerBox h2,
-.frontPageWrapper .frontPageGrid .winnerBox h3 {
-  font-family: "Open Sans", sans-serif !important;
-  padding: 0;
-  margin: 0;
-}
-
-.frontPageWrapper .frontPageGrid .winnerBox .winnerBoxTitle {
-  text-align: center;
-  font-size: 3vh;
-  font-weight: bold;
-  justify-self: center;
-  -ms-flex-item-align: center;
-      align-self: center;
-  padding: 0;
-}
-
-.frontPageWrapper .frontPageGrid .winnerBox hr {
-  height: 1px;
-  margin: 0 !important;
-  padding: 0 !important;
-  border-top: 1px solid rgba(255, 255, 255, 0.15) !important;
-}
-
-.frontPageWrapper .frontPageGrid .winnerBox .winnerName {
-  width: 100%;
-  text-align: center;
-  font-size: 2.8vh;
-  justify-self: center;
-  -ms-flex-item-align: center;
-      align-self: center;
-}
-
-.frontPageWrapper .frontPageGrid .centerBox {
-  text-align: center;
-  -ms-flex-line-pack: center;
-      align-content: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  height: 100%;
-}
-
-.frontPageWrapper .frontPageGrid .centerBox .boomsdayLogo {
-  margin-top: -9vh;
-  height: 30vh;
-}
-
-.frontPageWrapper .frontPageGrid .centerBox .centerBoxTitle {
-  margin-top: -3vh;
-  -webkit-text-stroke: 1px black;
-  -moz-text-stroke: 1px black;
-  -ms-text-stroke: 1px black;
-  -o-text-stroke: 1px black;
-  font-size: 5vh;
-}
-
-.frontPageWrapper .frontPageGrid .centerBox .centerBoxInfo {
-  font-family: "Open Sans", sans-serif;
-  font-size: 2.5vh;
-  font-weight: 200;
-}
-
-.frontPageWrapper .frontPageGrid .centerBox .exampleImgGrid {
-  margin-top: 3vh;
-}
-
-.frontPageWrapper .frontPageGrid .centerBox .exampleImgGrid .playExample_incomplete,
-.frontPageWrapper .frontPageGrid .centerBox .exampleImgGrid .playExample_complete {
-  height: 39vh;
-}
-
-.frontPageWrapper .frontPageGrid .centerBox .exampleImgGrid .playExample_arrow {
-  height: 10vh;
-}
-
-.frontPageWrapper .frontPageGrid .centerBox .hsButton {
-  width: 20vw;
-  max-width: 500px;
-  margin-left: 50%;
-  -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
-  margin-top: 4.7vh;
-}
-
-.bgVideo {
-  left: 52%;
-  -webkit-transform: translateX(-48%);
-          transform: translateX(-48%);
-  max-width: none;
-  position: fixed;
-  display: inline-block;
-  -o-object-fit: contain;
-     object-fit: contain;
-  z-index: 0;
-  top: -60%;
-}
-
 .footer {
   position: relative;
   bottom: 0;
-  margin-top: 1vh;
   z-index: 100;
   width: 100%;
-  height: 1.4rem;
+  height: 3.2vh;
   background-color: #2c0742c4;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -10680,8 +10560,10 @@ p {
   line-height: 1.4;
   color: rgba(255, 255, 255, 0.7);
   border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+  padding: 0;
   display: grid;
   grid-template-columns: 3fr 1fr 1fr 1fr 1fr 1fr 1fr 3fr;
+  grid-template-rows: 3.2vh;
   -ms-flex-line-pack: center;
       align-content: center;
   -webkit-box-pack: center;
@@ -10691,16 +10573,19 @@ p {
 
 .footer a {
   text-decoration: none;
+  padding-top: 0.9vh;
+  padding-bottom: 0.9vh;
   color: #fff;
-  font-size: 0.8rem;
+  font-size: 1.4vh;
   text-align: center;
-  height: 100%;
+  vertical-align: middle;
+  height: 3.2vh;
   width: 100%;
   min-width: 150px;
   border-right: 1px solid rgba(255, 255, 255, 0.15);
   border-left: 1px solid rgba(255, 255, 255, 0.15);
-  -webkit-transition: background-color, 0.5s, ease-out;
-  transition: background-color, 0.5s, ease-out;
+  -webkit-transition: background-color 0.5s ease-in;
+  transition: background-color 0.5s ease-in;
 }
 
 @media screen and (prefers-reduced-motion: reduce) {
@@ -10711,7 +10596,16 @@ p {
 }
 
 .footer a:hover {
+  -webkit-transition: background-color 0.5s ease-out;
+  transition: background-color 0.5s ease-out;
   background-color: #250736c4;
+}
+
+@media screen and (prefers-reduced-motion: reduce) {
+  .footer a:hover {
+    -webkit-transition: none;
+    transition: none;
+  }
 }
 
 a {
@@ -10806,6 +10700,433 @@ a:hover {
 }
 
 .hs-border:hover .hs-text.classic {
+  -webkit-transition: all 0.5s ease-out;
+  transition: all 0.5s ease-out;
   background: radial-gradient(circle, #e235ee 22%, #981cb4);
+}
+
+@media screen and (prefers-reduced-motion: reduce) {
+  .hs-border:hover .hs-text.classic {
+    -webkit-transition: none;
+    transition: none;
+  }
+}
+
+.frontPageWrapper {
+  height: 100%;
+  z-index: 100;
+  position: relative;
+}
+
+.frontPageWrapper .frontPageGrid {
+  height: 100%;
+  color: #ffffff;
+  z-index: 2;
+  display: grid;
+  grid-template-columns: 2fr 3fr 2fr;
+  grid-template-rows: 2fr;
+}
+
+.frontPageWrapper .frontPageGrid .winnerBox {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1px 2fr;
+  margin-left: 50px;
+  width: 70%;
+  height: 25vh;
+  font-family: "Open Sans", sans-serif;
+  color: rgba(255, 255, 255, 0.7);
+  background-color: #2c0742c4;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.frontPageWrapper .frontPageGrid .winnerBox h1,
+.frontPageWrapper .frontPageGrid .winnerBox h2,
+.frontPageWrapper .frontPageGrid .winnerBox h3 {
+  font-family: "Open Sans", sans-serif !important;
+  padding: 0;
+  margin: 0;
+}
+
+.frontPageWrapper .frontPageGrid .winnerBox .winnerBoxTitle {
+  text-align: center;
+  font-size: 3vh;
+  font-weight: bold;
+  justify-self: center;
+  -ms-flex-item-align: center;
+      align-self: center;
+  padding: 0;
+}
+
+.frontPageWrapper .frontPageGrid .winnerBox .winnerName {
+  width: 100%;
+  text-align: center;
+  font-size: 2.8vh;
+  justify-self: center;
+  -ms-flex-item-align: center;
+      align-self: center;
+}
+
+.frontPageWrapper .frontPageGrid .centerBox {
+  text-align: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 100%;
+}
+
+.frontPageWrapper .frontPageGrid .centerBox .boomsdayLogo {
+  margin-top: -9vh;
+  height: 30vh;
+}
+
+.frontPageWrapper .frontPageGrid .centerBox .centerBoxTitle {
+  font-family: "BelweBold" !important;
+  margin-top: -3vh;
+  -webkit-text-stroke: 1px black;
+  -moz-text-stroke: 1px black;
+  -ms-text-stroke: 1px black;
+  -o-text-stroke: 1px black;
+  font-size: 5vh;
+}
+
+.frontPageWrapper .frontPageGrid .centerBox .centerBoxInfo {
+  font-family: "Open Sans", sans-serif;
+  font-size: 2.5vh;
+  font-weight: 200;
+}
+
+.frontPageWrapper .frontPageGrid .centerBox .exampleImgGrid {
+  margin-top: 3vh;
+}
+
+.frontPageWrapper .frontPageGrid .centerBox .exampleImgGrid .hsCard {
+  height: 39vh;
+  z-index: 101;
+  display: inline-block;
+  position: relative;
+  -webkit-transform: scale(1);
+  transform: scale(1);
+  -webkit-transition: all 0.5s ease-out;
+  transition: all 0.5s ease-out;
+}
+
+@media screen and (prefers-reduced-motion: reduce) {
+  .frontPageWrapper .frontPageGrid .centerBox .exampleImgGrid .hsCard {
+    -webkit-transition: none;
+    transition: none;
+  }
+}
+
+.frontPageWrapper .frontPageGrid .centerBox .exampleImgGrid .hsCard:hover {
+  z-index: 102;
+  -webkit-transition: all 0.5s ease-in;
+  transition: all 0.5s ease-in;
+  -webkit-transform: scale(1.2);
+  transform: scale(1.2);
+}
+
+@media screen and (prefers-reduced-motion: reduce) {
+  .frontPageWrapper .frontPageGrid .centerBox .exampleImgGrid .hsCard:hover {
+    -webkit-transition: none;
+    transition: none;
+  }
+}
+
+.frontPageWrapper .frontPageGrid .centerBox .exampleImgGrid .playExample_incomplete:hover {
+  -webkit-transition: all 0.5s ease-in;
+  transition: all 0.5s ease-in;
+  filter: drop-shadow(-50px -50px 90px rgba(23, 23, 23, 0.85));
+  -webkit-filter: drop-shadow(-50px -50px 90px rgba(23, 23, 23, 0.85));
+  -moz-filter: drop-shadow(-50px -50px 90px rgba(23, 23, 23, 0.85));
+}
+
+@media screen and (prefers-reduced-motion: reduce) {
+  .frontPageWrapper .frontPageGrid .centerBox .exampleImgGrid .playExample_incomplete:hover {
+    -webkit-transition: none;
+    transition: none;
+  }
+}
+
+.frontPageWrapper .frontPageGrid .centerBox .exampleImgGrid .playExample_complete:hover {
+  filter: drop-shadow(50px -50px 90px rgba(23, 23, 23, 0.85));
+  -webkit-filter: drop-shadow(50px -50px 90px rgba(23, 23, 23, 0.85));
+  -moz-filter: drop-shadow(50px -50px 90px rgba(23, 23, 23, 0.85));
+}
+
+.frontPageWrapper .frontPageGrid .centerBox .exampleImgGrid .playExample_arrow {
+  height: 10vh;
+}
+
+.frontPageWrapper .frontPageGrid .centerBox .hsButton {
+  width: 20vw;
+  max-width: 500px;
+  margin-left: 50%;
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
+  margin-top: 4.7vh;
+  -webkit-transition: all 0.5s ease-out;
+  transition: all 0.5s ease-out;
+}
+
+@media screen and (prefers-reduced-motion: reduce) {
+  .frontPageWrapper .frontPageGrid .centerBox .hsButton {
+    -webkit-transition: none;
+    transition: none;
+  }
+}
+
+.bgVideo {
+  left: 52%;
+  -webkit-transform: translateX(-48%);
+          transform: translateX(-48%);
+  max-width: none;
+  position: fixed;
+  display: inline-block;
+  -o-object-fit: contain;
+     object-fit: contain;
+  z-index: 0;
+  top: -60%;
+}
+
+.playPageWrapper {
+  height: 85vh;
+  z-index: 100;
+  position: relative;
+}
+
+.playPageWrapper .playPageGrid {
+  position: relative;
+  display: grid;
+  height: 100%;
+  grid-template-areas: "cardNameBox hsCard contestantInfoBox" "cardArtBox hsCard submitButton";
+  grid-template-columns: 35vw 1fr 35vw;
+  grid-template-rows: 20vh 60vh;
+  grid-row-gap: 5vh;
+  grid-column-gap: 20px;
+}
+
+.playPageWrapper .playPageGrid .cardNameBox {
+  grid-area: "cardNameBox";
+  margin-left: 50px;
+  padding-left: 15px;
+  padding-right: 15px;
+  height: 23vh;
+  color: rgba(255, 255, 255, 0.7);
+  background-color: #2c0742c4;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.playPageWrapper .playPageGrid .cardNameBox .cardNameBoxTitle {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-size: 3vh;
+  font-weight: bold;
+  padding: 0;
+}
+
+.playPageWrapper .playPageGrid .cardNameBox hr {
+  margin-left: -15px !important;
+  margin-right: -15px !important;
+}
+
+.playPageWrapper .playPageGrid .cardNameBox .cardNameBoxP {
+  padding: 0;
+  margin-top: 5px;
+  font-size: 2.2vh;
+}
+
+.playPageWrapper .playPageGrid .cardNameBox .boxTextInput {
+  vertical-align: middle;
+  border-color: rgba(255, 255, 255, 0.15);
+  background-color: #76678027;
+  width: 100%;
+  color: #ffffff;
+  margin-bottom: 15px;
+  -webkit-transition: background-color 0.15s ease-out;
+  transition: background-color 0.15s ease-out;
+}
+
+@media screen and (prefers-reduced-motion: reduce) {
+  .playPageWrapper .playPageGrid .cardNameBox .boxTextInput {
+    -webkit-transition: none;
+    transition: none;
+  }
+}
+
+.playPageWrapper .playPageGrid .cardNameBox .boxTextInput:focus {
+  -webkit-transition: background-color 0.15s ease-in;
+  transition: background-color 0.15s ease-in;
+  background-color: #ccb5db57;
+}
+
+@media screen and (prefers-reduced-motion: reduce) {
+  .playPageWrapper .playPageGrid .cardNameBox .boxTextInput:focus {
+    -webkit-transition: none;
+    transition: none;
+  }
+}
+
+.playPageWrapper .playPageGrid .hsCard {
+  grid-area: "hsCard";
+  justify-self: center;
+  margin-top: -5vh;
+  margin-left: -7px;
+  height: 65vh;
+}
+
+.playPageWrapper .playPageGrid .cardArtBox {
+  margin-left: 50px;
+  grid-area: "cardArtBox";
+  color: rgba(255, 255, 255, 0.7);
+  background-color: #2c0742c4;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  height: 50vh;
+}
+
+.playPageWrapper .playPageGrid .cardArtBox .cardArtBoxTitle {
+  margin-top: 10px;
+  margin-left: 15px;
+  margin-bottom: 10px;
+  font-size: 3vh;
+  font-weight: bold;
+  max-height: 5vh;
+  padding: 0;
+}
+
+.playPageWrapper .playPageGrid .cardArtBox .artworkGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 2fr auto;
+  overflow: hidden;
+  height: 40vh;
+}
+
+.playPageWrapper .playPageGrid .cardArtBox .artworkGrid div {
+  width: 100%;
+  height: 35vh;
+  overflow: hidden;
+  display: grid;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.playPageWrapper .playPageGrid .cardArtBox .artworkGrid div img {
+  width: 100%;
+  -webkit-transform: scale(1.2);
+  transform: scale(1.2);
+}
+
+.playPageWrapper .playPageGrid .cardArtBox .artworkGrid .artRadio {
+  height: 5vh;
+  justify-self: center;
+  -ms-flex-item-align: center;
+      align-self: center;
+  height: 5vh;
+}
+
+.playPageWrapper .playPageGrid .contestantInfoBox {
+  grid-area: "contestantInfoBox";
+  position: relative;
+  margin-right: 50px;
+  padding-left: 15px;
+  min-height: 130px;
+  height: 75vh;
+  color: rgba(255, 255, 255, 0.7);
+  background-color: #2c0742c4;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.playPageWrapper .playPageGrid .contestantInfoBox .cardNameBoxTitle {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-size: 3vh;
+  font-weight: bold;
+  padding: 0;
+}
+
+.playPageWrapper .playPageGrid .contestantInfoBox hr {
+  margin-left: -15px !important;
+}
+
+.playPageWrapper .playPageGrid .contestantInfoBox .cardNameBoxP {
+  padding: 0;
+  margin-top: 10px;
+  margin-bottom: 5px;
+  font-size: 2.2vh;
+}
+
+.playPageWrapper .playPageGrid .contestantInfoBox .boxTextInput {
+  border-color: rgba(255, 255, 255, 0.15);
+  background-color: #76678027;
+  color: #ffffff;
+  -webkit-transition: background-color 0.15s ease-out;
+  transition: background-color 0.15s ease-out;
+}
+
+@media screen and (prefers-reduced-motion: reduce) {
+  .playPageWrapper .playPageGrid .contestantInfoBox .boxTextInput {
+    -webkit-transition: none;
+    transition: none;
+  }
+}
+
+.playPageWrapper .playPageGrid .contestantInfoBox .boxTextInput:focus {
+  -webkit-transition: background-color 0.15s ease-in;
+  transition: background-color 0.15s ease-in;
+  background-color: #ccb5db57;
+}
+
+@media screen and (prefers-reduced-motion: reduce) {
+  .playPageWrapper .playPageGrid .contestantInfoBox .boxTextInput:focus {
+    -webkit-transition: none;
+    transition: none;
+  }
+}
+
+.playPageWrapper .playPageGrid .contestantInfoBox .inputGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.playPageWrapper .playPageGrid .submitButton {
+  -ms-flex-item-align: end;
+      align-self: end;
+  justify-self: center;
+  width: 80%;
+  grid-area: "submitButton";
+  margin-bottom: 10vh;
+}
+
+.bgImage {
+  left: 52%;
+  -webkit-transform: translateX(-48%);
+          transform: translateX(-48%);
+  max-width: none;
+  position: fixed;
+  display: inline-block;
+  -o-object-fit: contain;
+     object-fit: contain;
+  z-index: 0;
+  top: -60%;
+}
+
+.bgImageOverlay {
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  background-color: rgba(60, 60, 60, 0.5);
+  max-width: none;
+  position: fixed;
+  display: inline-block;
+  -o-object-fit: contain;
+     object-fit: contain;
+  z-index: 1;
 }
 

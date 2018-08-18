@@ -1,0 +1,29 @@
+
+// Clear
+html, body {
+    margin: 0;
+    height: 100%;
+}
+
+// Type
+h1, h2, h2 {
+    font-family: $font-family-sans-serif;
+    font-weight: bold;
+}
+
+p {
+    font-family: $font-family-sans-serif;
+}
+
+// General Styling
+hr{
+    height: 1px;
+    margin: 0;
+    padding: 0;
+    border-top: 1px solid hsla(0,0%,100%,.15);
+}
+
+
+
+
+
