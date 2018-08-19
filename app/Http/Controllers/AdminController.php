@@ -31,9 +31,12 @@ class AdminController extends Controller
 
         // Image upload
       
-        $photoName=time() . '.' . $data["emptyCard"]->getClientOriginalExtension(); // concat time for unique name
-        $data["emptyCard"]->move(public_path('storage/images/emtpyCard'),$photoName); // photoname = path
-        $comp->emptyCard=$photoName;
+        // $photoName=time() . '.' . $data["emptyCard"]->getClientOriginalExtension(); // concat time for unique name
+
+        $imageName= $data["emptyCard"]->getClientOriginalName();
+        $data["emptyCard"]->move(public_path('storage/images/emptyCard'),$imageName); // photoname = path
+
+        $comp->emptyCard=$imageName;
 
         $comp->save();
 
@@ -41,9 +44,10 @@ class AdminController extends Controller
 
             $art = new artwork();
             $art->game_id= $comp->id;
-            $photoName=time() . '.' . $image["artworkImg"]->getClientOriginalExtension(); // concat time for unique name
-            $image["artworkImg"]->move(public_path('storage/images/fullArt'),$photoName); // photoname = path
-            $art->artworkImg=$photoName; 
+ 
+            $imageName= $image["artworkImg"]->getClientOriginalName();
+            $image["artworkImg"]->move(public_path('storage/images/fullArt'),$imageName); 
+            $art->artworkImg=$imageName; 
             if(isset($image['correctAnswer'])){
                 $art->correctAnswer = 1;
             }

@@ -3,6 +3,7 @@
 @section('content')
 
 {!! Form::open(['url' =>route('answer'),'files'=>false, 'method' => 'post']) !!}
+{!! Form::token() !!}
 <div class="playPageWrapper">
         <div class="playPageGrid">
             <div class="cardNameBox">
@@ -11,8 +12,9 @@
                 <p class="cardNameBoxP">Case- and punctuation sensitive.</p>
                 <input class="boxTextInput" type="text" name="cardName" placeholder="Card name"></input>
             </div>
-            <img class="hsCard" src="/img/cards/incomplete/incomplete_CrazedChemist.png"></img>
-            
+        <img class="hsCard" src="{{asset('storage/images/emptyCard/'.$data['emptyCard'])}}"></img>
+        
+        
             <div class ="contestantInfoBox">
                     <h2 class="cardNameBoxTitle">Tell us about yourself.</h2>
                     <hr>
@@ -44,14 +46,14 @@
                 <hr>
                 <div class="artworkGrid">
 
-                    <div><img src="/img/cards/fullArt/full_CrazedChemist.jpg" alt="artwork1"></img></div>
-                    <div><img src="/img/cards/fullArt/full_OmegaAgent.jpg" alt="artwork2"></img></div>
-                    <div><img src="/img/cards/fullArt/full_GigglingInventor.jpg" alt="artwork3"></img></div>
+                    <div><img src="{{asset('storage/images/fullArt/'.$data['artworks'][0]->artworkImg)}}" alt="artwork1"></img></div>
+                    <div><img src="{{asset('storage/images/fullArt/'.$data['artworks'][1]->artworkImg)}}"></img></div>
+                    <div><img src="{{asset('storage/images/fullArt/'.$data['artworks'][2]->artworkImg)}}" alt="artwork3"></img></div>
 
                     {{-- below: name is artworkImg id --}}
-                    <input class="artRadio" type="radio" name="cardArt1"></input> 
-                    <input class="artRadio" type="radio" name="cardArt2"></input>
-                    <input class="artRadio" type="radio" name="cardArt3"></input>
+                    <input class="artRadio" type="checkbox" name="cardArt1"></input> 
+                    <input class="artRadio" type="checkbox" name="cardArt2"></input>
+                    <input class="artRadio" type="checkbox" name="cardArt3"></input>
                 </div>
                 
             </div>
@@ -71,7 +73,7 @@
 
 {{-- @include('inc.footer') --}}
 <div class="bgImageOverlay"></div>
-<img src="\img\bgImage_VideoReplacer.jpg" class="bgImage"></img>
+<img src="{{asset('img\bgImage_VideoReplacer.jpg')}}" class="bgImage"></img>
 {!! Form::close() !!}
 @endsection
 
