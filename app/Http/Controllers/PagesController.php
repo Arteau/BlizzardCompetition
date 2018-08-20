@@ -16,21 +16,32 @@ class PagesController extends Controller
     public function index()
     {
         $game=DB::table('games')->where('inProgress',1)->get();
-        $lastGame=DB::table('games')->where('inProgress',0)->orderBy('created_at', 'desc')->get();
-      
+        $lastGame=DB::table('games')->where('inProgress',0)->orderBy('created_at', 'desc')->first();
+        // dd($lastGame);
         if(count($game) === 0){
+            
+            if(isset($lastGame)){
+                $lastGameAnswers = answer::whereHas('contestant', function ($query) {
+                    $query->where('winner', 1);
+                    })->where('game_id', $lastGame->id)->first();
+                // dd($lastGameAnswers->contestant->name);
+                $winnerName = $lastGameAnswers->contestant->name.' '.$lastGameAnswers->contestant->lastName;
+                return view('pages.index',compact('winnerName'));
+            }
             return view('pages.index');
+    
         }
 
-        if(count($lastGame)!==0){
+        if(isset($lastGame)){
             $lastGameAnswers = answer::whereHas('contestant', function ($query) {
                 $query->where('winner', 1);
-                })->where('game_id', $lastGame[0]->id)->first();
+                })->where('game_id', $lastGame->id)->first();
             // dd($lastGameAnswers->contestant->name);
             $winnerName = $lastGameAnswers->contestant->name.' '.$lastGameAnswers->contestant->lastName;
             return view('pages.index',compact('game', 'winnerName'));
         }
 
+        
         // todo: text 'no game currently in progress' if no game in progress
        
         return view('pages.index',compact('game'));
