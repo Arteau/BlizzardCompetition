@@ -11077,6 +11077,7 @@ submit {
 }
 
 .playPageWrapper .playPageGrid .contestantInfoBox .boxTextInput {
+  width: 90%;
   border-color: rgba(255, 255, 255, 0.15);
   background-color: #76678027;
   color: #ffffff;
@@ -11108,12 +11109,14 @@ submit {
 }
 
 .playPageWrapper .playPageGrid .contestantInfoBox .inputGrid {
+  width: 100%;
   display: grid;
   grid-template-columns: 1fr 1fr;
 }
 
 .playPageWrapper .playPageGrid .contestantInfoBox .inputGrid div {
   padding-top: 15px;
+  width: 100%;
 }
 
 .playPageWrapper .playPageGrid .submitButton {

@@ -23,22 +23,27 @@
                     <div class="inputGrid">
                                 <div>
                                     {!! Form::label('name', 'First name', '', ['class'=>'cardNameBoxP']) !!}
+                                    <br>
                                     {!! Form::text('name', '', ['class'=>'boxTextInput', 'placeholder' => 'First name.']) !!}
                                 </div>
                                 <div>
                                     {!! Form::label('lastName', 'Last name', '', ['class' => 'cardNameBoxP']) !!}
+                                    <br>
                                     {!! Form::text('lastName', '', ['class'=>'boxTextInput', 'placeholder'=>'Last name.']) !!}
                                 </div>
                                 <div>
                                     {!! Form::label('address', 'Address', '', ['class'=>'cardNameBoxP']) !!}
+                                    <br>
                                     {!! Form::text('address', '', ['class'=>'boxTextInput', 'placeholder' => 'Address.']) !!}
                                 </div>
                                 <div>
                                     {!! Form::label('city', 'City', '', ['class'=>'cardNameBoxP']) !!}
+                                    <br>
                                     {!! Form::text('city', '', ['class'=>'boxTextInput', 'placeholder' => 'City']) !!}
                                 </div>
                                 <div>
                                     {!! Form::label('email', 'Email', '', ['class'=>'cardNameBoxP']) !!}
+                                    <br>
                                     {!! Form::text('email', '', ['class'=>'boxTextInput', 'placeholder' => 'Email.']) !!}   
                                 </div>
                     </div>       

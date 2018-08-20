@@ -2,8 +2,10 @@
 
 namespace App\Console;
 
+use DB;
 use Illuminate\Console\Scheduling\Schedule;
 use Illuminate\Foundation\Console\Kernel as ConsoleKernel;
+use App\Console\Commands;
 
 class Kernel extends ConsoleKernel
 {
@@ -14,6 +16,7 @@ class Kernel extends ConsoleKernel
      */
     protected $commands = [
         //
+        Commands\dailycheckcommand::class,
     ];
 
     /**
@@ -26,6 +29,24 @@ class Kernel extends ConsoleKernel
     {
         // $schedule->command('inspire')
         //          ->hourly();
+
+        $schedule->command('daily-check')->dailyAt('00:01');
+
+        // $schedule->call(function() {
+            
+
+        //     // get contestant where contestant->answers == game where inprogress = true->correctAnswers, set contestant->winner=true
+        //     // 
+        //     // if carbonCurrentDate = game where inprogress = true -> endDate then inprogress = false
+        //     // get game where startDate = carbonCurrentDate -> set inprogress = true
+
+
+
+
+        //     // DB::table('answers')->where('')
+
+        // })->dailyAt('00:01');
+
     }
 
     /**

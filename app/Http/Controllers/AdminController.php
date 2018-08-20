@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 
 use App\game;
 use App\artwork;
+use App\contestant;
 use Illuminate\Http\Request;
 use App\Http\Requests\uploadrequest;
 
@@ -12,7 +13,8 @@ class AdminController extends Controller
 {
     //
     public function index(){
-        return view('admin.index');
+        $contestants = contestant::get();
+        return view('admin.index', compact('contestants'));
     }
 
     public function newCompetition(Request $data){
@@ -59,6 +61,12 @@ class AdminController extends Controller
 
         return redirect("/admin");
 
+    }
+
+    public function delete ($id)
+    {
+        contestant::where('id', $id)->delete();
+        return redirect('/admin');
     }
 
 }

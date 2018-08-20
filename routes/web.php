@@ -24,6 +24,7 @@ Route::get('/thanks', 'PagesController@thanks')->name('thanks');
 
 Route::get('/admin', 'AdminController@index')->name('admin')->middleware('auth');
 Route::post('/admin/newCompetition', 'AdminController@newCompetition')->name('newCompetition')->middleware('auth');
+Route::delete('/admin/contestant/{id}', 'AdminController@delete')->middleware('auth');
 
 Auth::routes();
 
