@@ -13894,7 +13894,7 @@ module.exports = __webpack_require__(43);
  */
 
 __webpack_require__(13);
-
+__webpack_require__(48);
 window.Vue = __webpack_require__(36);
 
 /**
@@ -47411,6 +47411,19 @@ if (false) {
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
+
+/***/ }),
+/* 44 */,
+/* 45 */,
+/* 46 */,
+/* 47 */,
+/* 48 */
+/***/ (function(module, exports) {
+
+
+function jsSubmit() {
+    document.getElementById('answerForm').submit();
+}
 
 /***/ })
 /******/ ]);

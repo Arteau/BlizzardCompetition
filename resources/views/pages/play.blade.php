@@ -3,14 +3,16 @@
 @section('content')
 
 {!! Form::open(['url' =>route('answer'),'files'=>false, 'method' => 'post']) !!}
+
 {!! Form::token() !!}
+
 <div class="playPageWrapper">
         <div class="playPageGrid">
             <div class="cardNameBox">
                 <h2 class="cardNameBoxTitle">Enter the correct card name.</h2>
                 <hr>
                 <p class="cardNameBoxP">Case- and punctuation sensitive.</p>
-                <input class="boxTextInput" type="text" name="cardName" placeholder="Card name"></input>
+                {!! Form::text('cardName', '', ['class' => 'boxTextInput', 'placeholder' => 'Card name.']) !!}
             </div>
         <img class="hsCard" src="{{asset('storage/images/emptyCard/'.$data['emptyCard'])}}"></img>
         
@@ -19,25 +21,25 @@
                     <h2 class="cardNameBoxTitle">Tell us about yourself.</h2>
                     <hr>
                     <div class="inputGrid">
-                            <div>
-                                    <p class="cardNameBoxP">First name.</p>
-                                    <input class="boxTextInput" type="text" name="contestantName" placeholder="First name."></input>    
+                                <div>
+                                    {!! Form::label('name', 'First name', '', ['class'=>'cardNameBoxP']) !!}
+                                    {!! Form::text('name', '', ['class'=>'boxTextInput', 'placeholder' => 'First name.']) !!}
                                 </div>
                                 <div>
-                                    <p class="cardNameBoxP">Last name.</p>
-                                    <input class="boxTextInput" type="text" name="contestantLastName" placeholder="Last name."></input>   
+                                    {!! Form::label('lastName', 'Last name', '', ['class' => 'cardNameBoxP']) !!}
+                                    {!! Form::text('lastName', '', ['class'=>'boxTextInput', 'placeholder'=>'Last name.']) !!}
                                 </div>
                                 <div>
-                                    <p class="cardNameBoxP">Address.</p>
-                                    <input class="boxTextInput" type="text" name="contestantAddress" placeholder="Address."></input>        
+                                    {!! Form::label('address', 'Address', '', ['class'=>'cardNameBoxP']) !!}
+                                    {!! Form::text('address', '', ['class'=>'boxTextInput', 'placeholder' => 'Address.']) !!}
                                 </div>
                                 <div>
-                                    <p class="cardNameBoxP">City.</p>
-                                    <input class="boxTextInput" type="text" name="contestantCity" placeholder="City."></input>    
+                                    {!! Form::label('city', 'City', '', ['class'=>'cardNameBoxP']) !!}
+                                    {!! Form::text('city', '', ['class'=>'boxTextInput', 'placeholder' => 'City']) !!}
                                 </div>
                                 <div>
-                                    <p class="cardNameBoxP">Email.</p>
-                                    <input class="boxTextInput" type="text" name="contestantEmail" placeholder="Email."></input>    
+                                    {!! Form::label('email', 'Email', '', ['class'=>'cardNameBoxP']) !!}
+                                    {!! Form::text('email', '', ['class'=>'boxTextInput', 'placeholder' => 'Email.']) !!}   
                                 </div>
                     </div>       
             </div>
@@ -47,19 +49,33 @@
                 <div class="artworkGrid">
 
                     <div><img src="{{asset('storage/images/fullArt/'.$data['artworks'][0]->artworkImg)}}" alt="artwork1"></img></div>
-                    <div><img src="{{asset('storage/images/fullArt/'.$data['artworks'][1]->artworkImg)}}"></img></div>
+                    <div><img src="{{asset('storage/images/fullArt/'.$data['artworks'][1]->artworkImg)}}" alt="artwork2"></img></div>
                     <div><img src="{{asset('storage/images/fullArt/'.$data['artworks'][2]->artworkImg)}}" alt="artwork3"></img></div>
 
                     {{-- below: name is artworkImg id --}}
-                    <input class="artRadio" type="checkbox" name="cardArt1"></input> 
-                    <input class="artRadio" type="checkbox" name="cardArt2"></input>
-                    <input class="artRadio" type="checkbox" name="cardArt3"></input>
+                @foreach($data['artworks'] as $artwork)
+                {!! Form::checkBox('cardArtNr', $artwork->id, '', ['class'=>'artRadio']) !!}
+                @endforeach
+ 
                 </div>
                 
             </div>
 
-            <div class="submitButton">@include("inc.hsbutton", ['textVar' => "submit!", 'href' => route('thanks')])</div>
+            {{-- <div class="submitButton">@include("inc.hsbutton", ['textVar' => "submit!", 'href' => route('answer')])</div> --}}
+            {{-- <div class="submitButton">{!! Form::submit("Submit!") !!}</div> --}}
+            <div class="submitButton">
+            <button type="submit" class="hs-wrapper classic">
+            <div class="hs-button classic">
+                    <span class="hs-border classic">
+                    <span class="hs-text classic">
+                    Submit!
+                    </span>
+                    </span>
+                </div>
+            </button>
+            </div>
         </div>
+
 </div>
 
 
