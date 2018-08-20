@@ -53,6 +53,9 @@ class PagesController extends Controller
         $contestant->email = $data["email"];
         $contestant->ip = \Request::ip();
         // dd($contestant);
+
+        // TODO: Validate IP, if IP exists already for this game ID, do not allow submit.
+
         $contestant->save();
         
 
@@ -61,7 +64,7 @@ class PagesController extends Controller
         $answer->cardName = $data["cardName"];
         $contestant->answers()->save($answer);
 
-       dd($answer->contestant_id);
+    //    dd($answer->contestant_id);
 
 
         return redirect("/thanks");

@@ -10959,6 +10959,7 @@ submit {
   margin-bottom: 15px;
   -webkit-transition: background-color 0.15s ease-out;
   transition: background-color 0.15s ease-out;
+  cursor: text !important;
 }
 
 @media screen and (prefers-reduced-motion: reduce) {
@@ -10972,6 +10973,8 @@ submit {
   -webkit-transition: background-color 0.15s ease-in;
   transition: background-color 0.15s ease-in;
   background-color: #ccb5db57;
+  cursor: text !important;
+  border: 1px solid #72478bad;
 }
 
 @media screen and (prefers-reduced-motion: reduce) {
@@ -11079,6 +11082,7 @@ submit {
   color: #ffffff;
   -webkit-transition: background-color 0.15s ease-out;
   transition: background-color 0.15s ease-out;
+  cursor: text !important;
 }
 
 @media screen and (prefers-reduced-motion: reduce) {
@@ -11092,6 +11096,8 @@ submit {
   -webkit-transition: background-color 0.15s ease-in;
   transition: background-color 0.15s ease-in;
   background-color: #ccb5db57;
+  cursor: text !important;
+  border: 1px solid #72478bad;
 }
 
 @media screen and (prefers-reduced-motion: reduce) {
@@ -11144,5 +11150,158 @@ submit {
   -o-object-fit: contain;
      object-fit: contain;
   z-index: 1;
+}
+
+.thanksBgImage {
+  min-height: 100%;
+  min-width: 1024px;
+  width: 100%;
+  height: auto;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 0;
+  display: inline-block;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+.thanksBgImageOverlay {
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  background-color: rgba(60, 60, 60, 0.096);
+  max-width: none;
+  position: fixed;
+  display: inline-block;
+  -o-object-fit: contain;
+     object-fit: contain;
+  z-index: 1;
+}
+
+.thanksPageWrapper {
+  height: 90vh;
+  z-index: 100;
+  position: relative;
+}
+
+.thanksPageWrapper .thanksPageGrid {
+  height: 100%;
+  color: #ffffff;
+  z-index: 2;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 2fr;
+}
+
+.thanksPageWrapper .thanksPageGrid .centerBox {
+  text-align: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 100%;
+}
+
+.thanksPageWrapper .thanksPageGrid .centerBox .boomsdayLogo {
+  height: 30vh;
+}
+
+.thanksPageWrapper .thanksPageGrid .centerBox .centerBoxTitle {
+  font-family: "BelweBold" !important;
+  margin-top: -3vh;
+  -webkit-text-stroke: 1px black;
+  -moz-text-stroke: 1px black;
+  -ms-text-stroke: 1px black;
+  -o-text-stroke: 1px black;
+  font-size: 10vh;
+}
+
+.thanksPageWrapper .thanksPageGrid .centerBox .centerBoxInfo {
+  font-family: "Open Sans", sans-serif;
+  font-size: 3.5vh;
+  font-weight: 200;
+}
+
+.thanksPageWrapper .thanksPageGrid .centerBox .exampleImgGrid {
+  margin-top: 3vh;
+}
+
+.thanksPageWrapper .thanksPageGrid .centerBox .exampleImgGrid .hsCard {
+  height: 39vh;
+  z-index: 101;
+  display: inline-block;
+  position: relative;
+  -webkit-transform: scale(1);
+  transform: scale(1);
+  -webkit-transition: all 0.5s ease-out;
+  transition: all 0.5s ease-out;
+}
+
+@media screen and (prefers-reduced-motion: reduce) {
+  .thanksPageWrapper .thanksPageGrid .centerBox .exampleImgGrid .hsCard {
+    -webkit-transition: none;
+    transition: none;
+  }
+}
+
+.thanksPageWrapper .thanksPageGrid .centerBox .exampleImgGrid .hsCard:hover {
+  z-index: 102;
+  -webkit-transition: all 0.5s ease-in;
+  transition: all 0.5s ease-in;
+  -webkit-transform: scale(1.2);
+  transform: scale(1.2);
+}
+
+@media screen and (prefers-reduced-motion: reduce) {
+  .thanksPageWrapper .thanksPageGrid .centerBox .exampleImgGrid .hsCard:hover {
+    -webkit-transition: none;
+    transition: none;
+  }
+}
+
+.thanksPageWrapper .thanksPageGrid .centerBox .exampleImgGrid .playExample_incomplete:hover {
+  -webkit-transition: all 0.5s ease-in;
+  transition: all 0.5s ease-in;
+  filter: drop-shadow(-50px -50px 90px rgba(23, 23, 23, 0.85));
+  -webkit-filter: drop-shadow(-50px -50px 90px rgba(23, 23, 23, 0.85));
+  -moz-filter: drop-shadow(-50px -50px 90px rgba(23, 23, 23, 0.85));
+}
+
+@media screen and (prefers-reduced-motion: reduce) {
+  .thanksPageWrapper .thanksPageGrid .centerBox .exampleImgGrid .playExample_incomplete:hover {
+    -webkit-transition: none;
+    transition: none;
+  }
+}
+
+.thanksPageWrapper .thanksPageGrid .centerBox .exampleImgGrid .playExample_complete:hover {
+  filter: drop-shadow(50px -50px 90px rgba(23, 23, 23, 0.85));
+  -webkit-filter: drop-shadow(50px -50px 90px rgba(23, 23, 23, 0.85));
+  -moz-filter: drop-shadow(50px -50px 90px rgba(23, 23, 23, 0.85));
+}
+
+.thanksPageWrapper .thanksPageGrid .centerBox .exampleImgGrid .playExample_arrow {
+  height: 10vh;
+}
+
+.thanksPageWrapper .thanksPageGrid .centerBox .hsButton {
+  width: 20vw;
+  max-width: 500px;
+  margin-left: 50%;
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
+  margin-top: 4.7vh;
+  -webkit-transition: all 0.5s ease-out;
+  transition: all 0.5s ease-out;
+}
+
+@media screen and (prefers-reduced-motion: reduce) {
+  .thanksPageWrapper .thanksPageGrid .centerBox .hsButton {
+    -webkit-transition: none;
+    transition: none;
+  }
 }
 
