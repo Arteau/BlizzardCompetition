@@ -1,0 +1,96 @@
+
+
+
+.adminWrapper{
+    width: 100%;
+    height: 100%;
+    padding-left: 50px;
+    padding-right: 50px;
+
+    .contestantTable{
+        margin-bottom: 50px;
+        tr:nth-child(even){
+            background-color: rgb(199, 199, 199);
+        }
+        tr:first-child{
+            font-weight: bolder;
+            td{
+                padding-bottom: 10px;
+
+            }
+        }
+        td{
+            border-right: 1px solid #6e6e6e;
+            padding-left: 10px;
+            padding-right: 10px;
+        }
+        td:last-child{
+            border-right: 0px;
+        }
+
+    }
+    .logout{
+        float: right;
+    }
+    .newGameForm{
+        display: grid;
+        grid-auto-rows: min-content;
+    
+    }
+    hr{
+        border: 0;
+        color: #6e6e6e;
+        background-color: #6e6e6e;
+    }
+    .labelAndInput{
+        display:grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
+        margin-bottom: 20px;
+        .textInput{
+            background-color: #fff;
+            cursor: text;
+            width: 50%;
+        }
+        .textInput:focus{
+            cursor: text;
+        }
+        .imageInput{
+            width: fit-content;
+            background-color: #fff;
+            cursor: pointer;
+        }
+        .dateInput{
+            width: fit-content;
+            background-color: #fff;
+            cursor: pointer;
+        }
+        
+        
+    }
+    .artworkSelect{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        .artworkSelectGrid{
+            display: grid;
+            grid-template-columns: 20px 1fr;
+            row-gap: 10px;
+            grid-template-rows: auto;
+            margin-bottom: 20px;
+
+            .imageInput{
+                cursor: pointer;
+            }
+            .imageInput:hover{
+                cursor: pointer;
+            }
+            .check{
+                align-self: center;
+                justify-self: center;
+            }
+            
+
+        }
+    }
+}
