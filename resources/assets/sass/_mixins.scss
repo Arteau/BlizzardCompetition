@@ -6,12 +6,6 @@
     transition: $args;
   }
 
-@mixin textStroke($args...) {
-    -webkit-text-stroke: $args;
-    -moz-text-stroke: $args;
-    -ms-text-stroke: $args;
-    -o-text-stroke: $args;    
-}
 @mixin transform($args...) {
     -webkit-transform: $args;
     -moz-transform: $args;

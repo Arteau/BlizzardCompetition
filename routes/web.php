@@ -11,10 +11,6 @@
 |
 */
 
-// Route::get('/', function () {
-//     return view('pages/home');
-// });
-
 Route::get('/', 'PagesController@index');
 
 Route::get('/play/{id}', 'PagesController@play')->name('play');

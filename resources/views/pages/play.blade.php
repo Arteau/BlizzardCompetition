@@ -14,7 +14,7 @@
                 <p class="cardNameBoxP">Case- and punctuation sensitive.</p>
                 {!! Form::text('cardName', '', ['class' => 'boxTextInput', 'placeholder' => 'Card name.']) !!}
             </div>
-        <img class="hsCard" src="{{asset('storage/images/emptyCard/'.$data['emptyCard'])}}"></img>
+        <img class="hsCard" src="{{secure_asset('storage/images/emptyCard/'.$data['emptyCard'])}}"></img>
         
         
             <div class ="contestantInfoBox">
@@ -53,9 +53,9 @@
                 <hr>
                 <div class="artworkGrid">
 
-                    <div><img src="{{asset('storage/images/fullArt/'.$data['artworks'][0]->artworkImg)}}" alt="artwork1"></img></div>
-                    <div><img src="{{asset('storage/images/fullArt/'.$data['artworks'][1]->artworkImg)}}" alt="artwork2"></img></div>
-                    <div><img src="{{asset('storage/images/fullArt/'.$data['artworks'][2]->artworkImg)}}" alt="artwork3"></img></div>
+                    <div><img src="{{secure_asset('storage/images/fullArt/'.$data['artworks'][0]->artworkImg)}}" alt="artwork1"></img></div>
+                    <div><img src="{{secure_asset('storage/images/fullArt/'.$data['artworks'][1]->artworkImg)}}" alt="artwork2"></img></div>
+                    <div><img src="{{secure_asset('storage/images/fullArt/'.$data['artworks'][2]->artworkImg)}}" alt="artwork3"></img></div>
 
                 @foreach($data['artworks'] as $artwork)
                 {!! Form::checkBox('cardArtNr', $artwork->id, '', ['class'=>'artRadio']) !!}
@@ -90,7 +90,7 @@
 
 {{-- @include('inc.footer') --}}
 <div class="bgImageOverlay"></div>
-<img src="{{asset('img\bgImage_VideoReplacer.jpg')}}" class="bgImage"></img>
+<img src="{{secure_asset('img\bgImage_VideoReplacer.jpg')}}" class="bgImage"></img>
 {!! Form::close() !!}
 @endsection
 

@@ -3,6 +3,17 @@
 @import url("https://fonts.googleapis.com/css?family=Raleway:300,400,600");
 @import url('https://fonts.googleapis.com/css?family=Open+Sans');
 
+//custom fonts
+@font-face{
+    font-family: "BelweBold";
+    src: url('/fonts/belwebold.ttf') format('truetype'), url('/fonts/belwebold.woff') format('woff'), url('/fonts/belwebold.woff2') format('woff2');
+}
+
+@font-face{
+    font-family: "BlizQuadrata";
+    src: url('/fonts/blizquadrata.ttf') format('truetype'), url('/fonts/blizquadrata.woff') format('woff');
+}
+
 // --------Mixins-----------
 @import "mixins";
 

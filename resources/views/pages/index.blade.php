@@ -38,9 +38,9 @@
                     <h2 class="centerBoxTitle">Currently no game in progress!</h2>
                     <p class="centerBoxInfo">Check back tomorrow to participate.</p>
                     <div class="exampleImgGrid">
-                            <img class="playExample_incomplete hsCard" src="{{asset('img/frontpage/empty_GoblinBomb.png')}}"></img>
-                            <img class="playExample_arrow" src="{{asset('img/frontpage/arrowRight.png')}}" alt="arrowRight"></img>
-                            <img class="playExample_complete hsCard" src="{{asset('img/frontpage/card_GoblinBomb.png')}}"></img>
+                            <img class="playExample_incomplete hsCard" src="{{secure_asset('img/frontpage/empty_GoblinBomb.png')}}"></img>
+                            <img class="playExample_arrow" src="{{secure_asset('img/frontpage/arrowRight.png')}}" alt="arrowRight"></img>
+                            <img class="playExample_complete hsCard" src="{{secure_asset('img/frontpage/card_GoblinBomb.png')}}"></img>
                             
                     </div>
                     @endif
@@ -50,6 +50,6 @@
 </div>
 @include('inc.footer')
 <video autoplay muted loop class="bgVideo">
-        <source src="{{asset('vid/bgVideo.mp4')}}" type"video/mp4">
+        <source src="{{secure_asset('vid/bgVideo.mp4')}}" type"video/mp4">
 </video>
 @endsection
