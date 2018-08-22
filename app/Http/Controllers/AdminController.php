@@ -30,13 +30,9 @@ class AdminController extends Controller
         else{
             $comp->inProgress=0;
         }
-
-        // Image upload
       
-        // $photoName=time() . '.' . $data["emptyCard"]->getClientOriginalExtension(); // concat time for unique name
-
         $imageName= $data["emptyCard"]->getClientOriginalName();
-        $data["emptyCard"]->move(public_path('storage/images/emptyCard'),$imageName); // photoname = path
+        $data["emptyCard"]->move(public_path('storage/images/emptyCard'),$imageName); 
 
         $comp->emptyCard=$imageName;
 

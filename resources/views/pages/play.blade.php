@@ -57,7 +57,6 @@
                     <div><img src="{{asset('storage/images/fullArt/'.$data['artworks'][1]->artworkImg)}}" alt="artwork2"></img></div>
                     <div><img src="{{asset('storage/images/fullArt/'.$data['artworks'][2]->artworkImg)}}" alt="artwork3"></img></div>
 
-                    {{-- below: name is artworkImg id --}}
                 @foreach($data['artworks'] as $artwork)
                 {!! Form::checkBox('cardArtNr', $artwork->id, '', ['class'=>'artRadio']) !!}
                 @endforeach
@@ -65,9 +64,6 @@
                 </div>
                 
             </div>
-
-            {{-- <div class="submitButton">@include("inc.hsbutton", ['textVar' => "submit!", 'href' => route('answer')])</div> --}}
-            {{-- <div class="submitButton">{!! Form::submit("Submit!") !!}</div> --}}
             <div class="submitButton">
             <button type="submit" class="hs-wrapper classic">
             <div class="hs-button classic">

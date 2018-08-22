@@ -7,6 +7,3 @@
         </span>
         </a>
 </div>
-
-{{-- <div class="hsButton">@include("inc.hsbutton", ['textVar' => "Button Text!"])</div> --}}
-{{-- Source of button: https://codepen.io/CakeForge/pen/KrLyNQ --}}

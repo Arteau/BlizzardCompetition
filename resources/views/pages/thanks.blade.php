@@ -9,7 +9,6 @@
                         <a href="/"><img class="boomsdayLogo" src="/img/boomsdayLogo.png"></a>
 
                     <h1 class="centerBoxTitle">Thank you for playing!</h1>
-                    {{-- <hr> --}}
                     <p class="centerBoxInfo">Come back and check the front page tomorrow to see if you won!</p>
                     <div class="hsButton">@include("inc.hsbutton", ['textVar' => "homepage!", 'href' => '/'])</div>
             

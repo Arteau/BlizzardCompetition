@@ -33,13 +33,13 @@
 <div class="artworkSelect">
 {!! Form::label("artworkImg", "Select the artwork (check box if the selected art is the correct answer)") !!}
 <div class="artworkSelectGrid">
-{!! Form::checkBox("images[0][correctAnswer]", '', '', ['class' => 'check']) !!}
+{!! Form::checkBox("images[0][correctAnswer]") !!}
 {!! Form::file("images[0][artworkImg]", ['class' => 'imageInput']) !!}
 
-{!! Form::checkBox("images[1][correctAnswer]", '', '', ['class' => 'check']) !!}
+{!! Form::checkBox("images[1][correctAnswer]") !!}
 {!! Form::file("images[1][artworkImg]", ['class' => 'imageInput']) !!}
 
-{!! Form::checkBox("images[2][correctAnswer]", '', '', ['class' => 'check']) !!}
+{!! Form::checkBox("images[2][correctAnswer]") !!}
 {!! Form::file("images[2][artworkImg]", ['class' => 'imageInput']) !!}
 
 </div>

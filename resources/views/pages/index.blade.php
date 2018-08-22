@@ -18,8 +18,6 @@
                         @else
                         No winner.
                         @endif
-{{--                        
-                        Arteau De Meester --}}
                         </h3>
                 </div>
                 <div class="centerBox">
@@ -27,7 +25,6 @@
                 @if(isset($game))
 
                     <h2 class="centerBoxTitle">Get the card right and win!</h2>
-                    {{-- <hr> --}}
                     <p class="centerBoxInfo">How well do you know the Boomsday Project cards?</p>
                     <div class="exampleImgGrid">
                             <img class="playExample_incomplete hsCard" src="{{asset('img/frontpage/empty_GoblinBomb.png')}}"></img>
@@ -39,7 +36,6 @@
                     @else
 
                     <h2 class="centerBoxTitle">Currently no game in progress!</h2>
-                    {{-- <hr> --}}
                     <p class="centerBoxInfo">Check back tomorrow to participate.</p>
                     <div class="exampleImgGrid">
                             <img class="playExample_incomplete hsCard" src="{{asset('img/frontpage/empty_GoblinBomb.png')}}"></img>
@@ -56,8 +52,4 @@
 <video autoplay muted loop class="bgVideo">
         <source src="{{asset('vid/bgVideo.mp4')}}" type"video/mp4">
 </video>
-{{-- 
-<div class="pageDivider"></div>
-<div class="parchment">
-</div> --}}
 @endsection
